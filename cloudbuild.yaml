@@ -1,0 +1,52 @@
+# Copyright 2019 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+steps:
+- id: 'Fetching Branch'
+  name: 'alpine'
+  entrypoint: 'sh'  
+  args: 
+  - '-c'
+  - | 
+      echo "***********************"
+      echo "$BRANCH_NAME"
+      echo "***********************"
+
+- id: 'Init, Plan & Build Instance Template'
+  name: 'hashicorp/terraform:0.14.6'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - |
+      if [ -d "instance_template/" ]; then
+        cd instance_template
+        terraform init && terrform plan && terraform apply -auto-approve
+      else
+        echo "failed to find instance template directory"
+      fi 
+
+# [Build Managed Instance Group]
+- id: 'Init, Plan & Build MIG'
+  name: 'hashicorp/terraform:0.14.6'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      if [ -d "mig/" ]; then
+        cd mig      
+        terraform init && terraform plan && terraform apply -auto-approve
+      else
+        echo "failed to find mig directory"
+      fi
