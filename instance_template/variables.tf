@@ -150,7 +150,7 @@ variable "metadata" {
 variable "service_account" {
   type = string
   description = "Service account to attach to the instance. See https://www.terraform.io/docs/providers/google/r/compute_instance_template.html#service_account."
-  default     = "249090526984-compute@developer.gserviceaccount.com"
+  default     = "684752503842-compute@developer.gserviceaccount.com"
 }
 
 ###########################
