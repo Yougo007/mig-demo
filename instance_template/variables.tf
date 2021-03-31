@@ -17,7 +17,7 @@
 variable "project_id" {
   type        = string
   description = "The GCP project ID"
-  default     = "yougo-projects"
+  default     = "yougo-k8-hardway-256417"
 }
 
 variable "name_prefix" {
