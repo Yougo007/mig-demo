@@ -15,7 +15,7 @@
 
 terraform {
   backend "gcs" {
-    bucket = "yougo-projects-tfstate"
-    prefix = "env/dev"
+    bucket = "yougo-projects-tfstate1"
+    prefix = "env/searchking-instance-template"
   }
 }
