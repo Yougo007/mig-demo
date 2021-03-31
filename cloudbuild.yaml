@@ -46,7 +46,7 @@ steps:
   - | 
       if [ -d "mig/" ]; then
         cd mig      
-        terraform init && terraform plan && terraform apply -var 'instance_template=set_link' -auto-approve
+        terraform init && terraform plan && terraform apply -auto-approve
       else
         echo "failed to find mig directory"
       fi
