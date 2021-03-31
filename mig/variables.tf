@@ -39,7 +39,7 @@ variable "region" {
 
 variable "instance_template" {
   description = "Instance template self_link used to create compute instances"
-  default     = "https://www.googleapis.com/compute/beta/projects/yougo-k8-hardway-256417/global/instanceTemplates/searchkings-instance-template20210331224829602100000001"
+  default     = "https://www.googleapis.com/compute/beta/projects/yougo-k8-hardway-256417/global/instanceTemplates/searchkings-instance-template20210331230244971500000001"
 }
 
 variable "target_size" {
