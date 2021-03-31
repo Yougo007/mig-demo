@@ -32,7 +32,7 @@ steps:
   - |
       if [ -d "instance_template/" ]; then
         cd instance_template
-        terraform init && terrform plan && terraform apply -auto-approve
+        terraform init && terraform plan && terraform apply -auto-approve
       else
         echo "failed to find instance template directory"
       fi 
