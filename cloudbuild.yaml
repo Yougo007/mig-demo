@@ -38,15 +38,15 @@ steps:
       fi 
 
 # [Build Managed Instance Group]
-- id: 'Init, Plan & Build MIG'
-  name: 'hashicorp/terraform:0.14.6'
-  entrypoint: 'sh'
-  args: 
-  - '-c'
-  - | 
-      if [ -d "mig/" ]; then
-        cd mig      
-        terraform init && terraform plan && terraform apply -auto-approve
-      else
-        echo "failed to find mig directory"
-      fi
+#- id: 'Init, Plan & Build MIG'
+#  name: 'hashicorp/terraform:0.14.6'
+#  entrypoint: 'sh'
+#  args: 
+#  - '-c'
+#  - | 
+#      if [ -d "mig/" ]; then
+#        cd mig      
+#        terraform init && terraform plan && terraform apply -auto-approve
+#      else
+#        echo "failed to find mig directory"
+#      fi
