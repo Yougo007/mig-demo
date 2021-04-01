@@ -134,7 +134,7 @@ variable "network_ip" {
 
 variable "startup_script" {
   description = "User startup script to run when instances spin up"
-  default     = "sudo rm -rf /etc/yum.repos.d/google-cloud.repo && sudo yum update -y && sudo yum install httpd -y && sudo service httpd  start" 
+  default     = "sudo rm -rf /etc/yum.repos.d/google-cloud.repo && sudo yum update -y && sudo yum install httpd -y && sudo service httpd start" 
 }
 
 variable "metadata" {
