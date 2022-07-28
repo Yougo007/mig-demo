@@ -22,7 +22,7 @@ variable "project_id" {
 
 variable "name_prefix" {
   description = "Name prefix for the instance template"
-  default     = "searchkings-instance-template"
+  default     = "mig-instance-template"
 }
 
 variable "machine_type" {
