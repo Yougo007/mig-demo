@@ -39,8 +39,7 @@ variable "region" {
 
 variable "instance_template" {
   description = "Instance template self_link used to create compute instances"
-  default     = "https://www.googleapis.com/compute/beta/projects/yougo-k8-hardway-256417/global/instanceTemplates/searchkings-instance-template20210401031335008800000001"
-}
+  default     = "https://www.googleapis.com/compute/beta/projects/yougo-k8-hardway-256417/global/instanceTemplates/mig-instance-template20220728171224504500000001
 
 variable "target_size" {
   description = "The target number of running instances for this managed instance group. This value should always be explicitly set unless this resource is attached to an autoscaler, in which case it should never be set."
